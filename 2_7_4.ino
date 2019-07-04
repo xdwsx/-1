@@ -18,21 +18,28 @@ void loop()
     getbyte = Serial.read();
     getbyte = getbyte-'0';
     
+    Serial.println(getbyte,DEC);
+    Serial.print('\n');
     
   	digitalWrite(4, LOW);
   	delay(10); // Wait for 10 millisecond(s)
-    Set_Pin(7, (getbyte&0x1));
-    Set_Pin(8, (getbyte>>1)&0x1);
-    Set_Pin(12, (getbyte>>2)&0x1);
+    
     Set_Pin(13, (getbyte>>3)&0x1);
+    Set_Pin(12, (getbyte>>2)&0x1);
+    Set_Pin(8, (getbyte>>1)&0x1);
+    Set_Pin(7, (getbyte&0x1));
+    
+    Serial.print('\n');
+    
   	digitalWrite(4, HIGH);
   	delay(10); // Wait for 10 millisecond(s)
   }
 }
 
 void Set_Pin(int pin,int flag){
-  
+ 
   Serial.println(flag);
+
   if(flag == 1) {
     
   	digitalWrite(pin,HIGH);
