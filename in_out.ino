@@ -21,7 +21,7 @@ void loop() {
       case 'a' :{
       morse.dot();
       morse.dash();
-      continue;
+      break;
       }
       
       
@@ -30,7 +30,7 @@ void loop() {
       morse.dot();
       morse.dot();
       morse.dot();
-      continue;
+      break;
       }
 
       case 'c' :{
@@ -38,19 +38,19 @@ void loop() {
       morse.dot();
       morse.dash();
       morse.dot();
-      continue;
+      break;
       }
 
       case 'd' :{
       morse.dash();
       morse.dot();
       morse.dot();
-      continue;
+      break;
       }
       
       case 'e':{
       morse.dot();
-      continue;
+      break;
       }
 
       case 'f' :{
@@ -58,14 +58,14 @@ void loop() {
       morse.dot();
       morse.dash();
       morse.dot();
-      continue;
+      break;
       }
 
       case 'g' :{
       morse.dash();
       morse.dot();
       morse.dot();
-      continue;
+      break;
       }
 
       case 'h' :{
@@ -73,12 +73,12 @@ void loop() {
       morse.dot();
       morse.dot();
       morse.dot();
-      continue;
+      break;
       }
       case 'i' :{
       morse.dot();
       morse.dot();
-      continue;
+      break;
       }
 
       case 'j' :{
@@ -86,40 +86,40 @@ void loop() {
       morse.dash();
       morse.dash();
       morse.dash(); 
-      continue;
+      break;
       }
 
       case 'k' :{
       morse.dash();
       morse.dot();
       morse.dash();
-      continue;
+      break;
       }
 
       case 'l' :{
       morse.dot();
       morse.dash();
       morse.dot();
-      continue;
+      break;
       }
 
       case 'm' :{
       morse.dash();
       morse.dash();
-      continue;
+      break;
       }
 
       case 'n' :{
       morse.dash();
       morse.dot();
-      continue;
+      break;
       }
 
       case 'o' :{
       morse.dash();
       morse.dash();
       morse.dash();
-      continue;
+      break;
       }
 
       case 'p' :{
@@ -127,7 +127,7 @@ void loop() {
       morse.dash();
       morse.dash();
       morse.dot();
-      continue;
+      break;
       }
 
       case 'q' :{
@@ -135,7 +135,7 @@ void loop() {
       morse.dash();
       morse.dot();
       morse.dash();
-      continue;
+      break;
       }
 
 
@@ -143,40 +143,40 @@ void loop() {
       morse.dot();
       morse.dash();
       morse.dot();
-      continue;
+      break;
       }
 
       case 's' :{
       morse.dot();
       morse.dot();
       morse.dot();
-      continue;
+      break;
       }
 
       case 't' :{
       morse.dash();
-      continue;
+      break;
       }
 
       case 'u' :{
       morse.dot();
       morse.dot();
       morse.dash();
-      continue;
+      break;
       }
       case 'v' :{
       morse.dot();
       morse.dot();
       morse.dot();
       morse.dash();
-      continue;
+      break;
       }
       
       case 'w' :{
       morse.dot();
       morse.dash();
       morse.dash();
-      continue;
+      break;
       }
       
       case 'x' :{
@@ -184,7 +184,7 @@ void loop() {
       morse.dot();
       morse.dot();
       morse.dash();
-      continue;
+      break;
       }
       
       case 'y' :{
@@ -192,7 +192,7 @@ void loop() {
       morse.dot();
       morse.dash();
       morse.dash();
-      continue;
+      break;
       }
       
       case 'z' :{
@@ -200,21 +200,23 @@ void loop() {
       morse.dash();
       morse.dot();
       morse.dot();
-      continue;
+      break;
       }
 
       case ' ' :{
       morse.c_space();
-      continue;
+      break;
       }
       
-      case '\r' :{
+      case '\\' :{
       morse.w_space();
-      continue;
+      break;
       }
 
       default:{
-      Serial.print("Please input lowercase letters, or' ', or'\r'");
+      Serial.print("Please input lowercase letters, or' ', or'\\'");
+      break;
+      
       }
     }
   }
